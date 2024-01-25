@@ -18,7 +18,6 @@
 
 body {
     background-color: var(--background);
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,25 +40,24 @@ body {
     width: 6%;
 }
 
-.decorder_main {
+.container_main {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .main__decoder {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
+    gap: 15px;
 }
 
 #decoder__text {
-    padding: 10px;
     height: 70vh;
     border: none;
     border-radius: 10px;
     color: var(--color-primary);
+    padding: 10px;
 }
 
 #decoder__text::placeholder {
@@ -83,15 +81,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     gap: 12px;
 }
 
 .button__crip, .button_desc, .button__paste {
     width: 100%;
-    padding: 20px;
     border: none;
     border-radius: 20px;
+    padding: 20px;
     cursor: pointer;   
 }
 
@@ -132,7 +129,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     gap: 14px;
 }
 
@@ -141,8 +137,12 @@ body {
     text-align: center;
 }
 #decoder {
+    width: 80vw;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    color: var(--color-primary);
     padding: 10px;
-    text-align: center;
 }
 
 .decoder__footer {
@@ -174,12 +174,14 @@ body {
     transform: scale(1.5);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     #decoder__text {
-        width: 100vw;
-        padding: 20px;
+        width: 80vw;
     }
     .decoder__button {
         flex-direction: row;
+    }
+    .button__paste {
+        width: 50%;
     }
 }

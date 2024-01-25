@@ -12,7 +12,7 @@
         <img class="header__logo" src="./assets/img/logo.svg" alt="Imagem Logo">
         <!-- <h1 class="header_text_title">Olá <span class="title_user">visitante!</span></h1> -->
     </header>
-    <main class="decorder_main">
+    <main class="container_main">
         <section class="main__decoder">
             <textarea id="decoder__text" name="text" placeholder="Digite seu texto aqui..."></textarea>
             <div class="text__alert">
@@ -27,8 +27,8 @@
         <section class="main__text">
             <img class="img__search" src="./assets/img/imgsearch.svg" alt="Imagem Search">
             <div class="text__descrip">
-                <h3 class="descrip_status">Nenhuma mensagem encontrada</h3>
-                <div id="decoder"></div>
+                <h3 class="descrip_status" id="status">Nenhuma mensagem encontrada</h3>
+                <textarea id="decoder" disabled></textarea>
                 <button class="button__paste">Copiar</button>
             </div>
         </section>
