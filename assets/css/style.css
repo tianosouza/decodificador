@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
 :root {
     --color-primary: #0A3871;
     --color-secondary: #343440;
     --color-tertiary: #495057;
     --background: #F3F5FC;
+    --background-secondary: #D8DFE8;
+    --back-linear: linear-gradient(180deg, #0A3871 0%, #194B8A 53%, #1D5191 100%);
 }
 
 * {
@@ -16,13 +18,168 @@
 
 body {
     background-color: var(--background);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-header {
+.decoder__header {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     color: var(--color-primary);
     font-weight: 700;
+    font-size: 0.6rem;
+}
+
+.header__logo {
+    width: 6%;
+}
+
+.decorder_main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__decoder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+#decoder__text {
+    padding: 10px;
+    height: 70vh;
+    border: none;
+    border-radius: 10px;
+    color: var(--color-primary);
+}
+
+#decoder__text::placeholder {
+    color: var(--color-primary);
+}
+
+#decoder__text:focus {
+    outline: none;
+}
+
+.text__alert {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    font-size: .6rem;
+}
+
+.decoder__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 12px;
+}
+
+.button__crip, .button_desc, .button__paste {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;   
+}
+
+.button__crip, .button__paste {
+    background-color: var(--color-primary);
+    color: var(--background);
+    font-size: .9rem;
+}
+
+.button__crip:hover, .button__paste:hover {
+    background-color: var(--background-secondary);
+    color: var(--color-primary);
+}
+
+.button_desc {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.button_desc:hover {
+    background-color: var(--color-primary);
+    color: var(--background);
+}
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.img__search {
+    display: none;
+}
+
+.text__descrip {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 14px;
+}
+
+.descrip_status {
+    width: 80%;
+    text-align: center;
+}
+#decoder {
+    padding: 10px;
+    text-align: center;
+}
+
+.decoder__footer {
+    width: 100vw;
+    height: 18vh;
+    background-color: var(--color-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: var(--background);
+    font-weight: 200;
+    gap: 10px;
+}
+
+.footer__copyright {
+    font-size: .9rem;
+    font-style: italic;
+}
+
+.social__mida {
+    display: flex;
+    gap: 20px;
+}
+
+.fa-brands:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    #decoder__text {
+        width: 100vw;
+        padding: 20px;
+    }
+    .decoder__button {
+        flex-direction: row;
+    }
 }
