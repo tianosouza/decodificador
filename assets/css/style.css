@@ -41,8 +41,11 @@ body {
 }
 
 .container_main {
+    width: 90vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 
@@ -53,6 +56,7 @@ body {
 }
 
 #decoder__text {
+    width: 90vw;
     height: 70vh;
     border: none;
     border-radius: 10px;
@@ -115,8 +119,10 @@ body {
 }
 
 .main__text {
+    width: 90vw;
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
 .img__search {
@@ -124,25 +130,24 @@ body {
 }
 
 .text__descrip {
-    width: 80vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   padding: 10px;
 }
 
 .descrip_status {
-    width: 80%;
+    width: 100%;
+    font-size: .9rem;
     text-align: center;
 }
 #decoder {
-    width: 80vw;
-    height: auto;
+    height: 30vh;
     border: none;
     border-radius: 10px;
     color: var(--color-primary);
-    padding: 10px;
+    padding: 15px;
 }
 
 .decoder__footer {
@@ -183,5 +188,11 @@ body {
     }
     .button__paste {
         width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container_main {
+        flex-direction: row;
     }
 }

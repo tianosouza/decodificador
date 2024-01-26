@@ -1,7 +1,7 @@
 
 function decodeText() {
     const encodedTextElement = document.getElementById("decoder__text");
-    const encodedText = document.getElementById("decoder__text").value.toLowerCase();
+    const encodedText = encodedTextElement.value.toLowerCase();
     const decodedResultElement = document.getElementById("decoder");
     const statusDecoder = document.getElementById("status");
 
@@ -9,13 +9,12 @@ function decodeText() {
     
     decodedResultElement.innerText = decodedText;
     statusDecoder.innerHTML = "Mensagem Criptografada";
-    encodedTextElement.value = "";
+    
     encodedTextElement.addEventListener('click', function() {
-        statusDecoder.innerHTML = "Nenhuma mensagen encontrada"
-        decodedResultElement.value = ""
-    })
+        statusDecoder.innerHTML = "Nenhuma mensagen encontrada";
+        // decodedResultElement.value = "";
+    });
 }
-
 
 function decode(encodedText) {
     let decodedText = "";
@@ -47,3 +46,24 @@ function decode(encodedText) {
 
     return decodedText;
 }
+
+
+function copyButton () {
+    const encodedTextElement = document.getElementById("decoder__text");
+    const encodedText = encodedTextElement.value.toLowerCase();
+    return decode(encodedText);
+}
+
+function encodeText () {
+    const encodedTextElement = document.getElementById("decoder__text");
+    const encodedText = encodedTextElement.value.toLowerCase();
+    const decodedResultElement = document.getElementById("decoder");
+    const statusDecoder = document.getElementById("status");
+
+    encodedTextElement.value = "";
+
+    statusDecoder.innerHTML = "Mensagem descriptografada";
+    
+    decodedResultElement.innerHTML = encodedText;
+}
+
