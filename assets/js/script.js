@@ -1,19 +1,22 @@
-
 function decodeText() {
     const encodedTextElement = document.getElementById("decoder__text");
     const encodedText = encodedTextElement.value.toLowerCase();
     const decodedResultElement = document.getElementById("decoder");
     const statusDecoder = document.getElementById("status");
+    const imgTexEncry = document.getElementById('img__search');
 
     const decodedText = decode(encodedText);
     
     decodedResultElement.innerText = decodedText;
-    statusDecoder.innerHTML = "Mensagem Criptografada";
-    
-    encodedTextElement.addEventListener('click', function() {
-        statusDecoder.innerHTML = "Nenhuma mensagen encontrada";
-        // decodedResultElement.value = "";
-    });
+
+    if (decodedText) {
+        imgTexEncry.setAttribute('style', 'display:none');
+        statusDecoder.innerHTML = "Mensagem Criptografada!";
+    } 
+    if (decodedText === "") {
+        statusDecoder.innerHTML = "Você precisa digitar alguma palavra para criptografar!";
+        statusDecoder.setAttribute('style', 'color: red', 'font-weight: 700')
+    }
 }
 
 function decode(encodedText) {
@@ -62,7 +65,6 @@ function encodeText () {
 
     encodedTextElement.value = "";
 
-    statusDecoder.innerHTML = "Mensagem descriptografada";
     
     decodedResultElement.innerHTML = encodedText;
 }

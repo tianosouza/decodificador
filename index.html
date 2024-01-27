@@ -21,15 +21,16 @@
                 <p>Apenas letras minúsculas e sem acento.</p>
             </div>
             <div class="decoder__button">
-                <button class="button__crip" onclick="decodeText()">Criptografar</button>
+                <button class="button__crip"  onclick="decodeText()">Criptografar</button>
                 <button class="button_desc" onclick="encodeText()">Descriptografar</button>
             </div>
         </section>
         <section class="main__text">
             <div class="text__descrip">              
-                <div id="decoder">
+                <div class="decoder__">
+                    <img id="img__search" src="./assets/img/imgsearch.svg" alt="Imagem Search">
                     <h3 class="descrip_status" id="status">Nenhuma mensagem encontrada</h3>
-                    <img class="img__search" src="./assets/img/imgsearch.svg" alt="Imagem Search">
+                    <div id="decoder"></div>
                 </div>
                 <button class="button__paste" onclick="copyButton()">Copiar</button>
             </div>
