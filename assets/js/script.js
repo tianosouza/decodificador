@@ -22,11 +22,13 @@ addEventListener('click', function (event) {
     const textTyped = document.getElementById('decode__text');
     const alert = document.getElementById('text__alert');
     const statusDecode = document.getElementById("status");
+    const resEncrypted = document.getElementById('encrypted');
 
     if (event.target == textTyped ) {
         alert.setAttribute('style', 'color: #0A3871');
         statusDecode.setAttribute('style', 'color: #0A3871');        
         statusDecode.innerHTML= 'Nenhuma mensagem encontrada';
+        resEncrypted.innerHTML='';
     }
 })
 
