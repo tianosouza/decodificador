@@ -95,9 +95,7 @@ function decryptText () {
 }
 
 function  pasteText() {
-    const btnPast = document.getElementById('btn__paste');
     const resEncrypted = document.getElementById('encrypted');
-    const body = document.querySelector('body');
     const imgSearch = document.getElementById('img__search');
     const statusDecode = document.getElementById("status");
     
