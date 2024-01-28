@@ -72,10 +72,15 @@ function decryptText () {
     const resEncrypted = document.getElementById('encrypted');
     const statusDecode = document.getElementById("status");
 
-    let result;
+
+    if ( textUpercase(textTyped)) {
+        statusDecode.setAttribute('style', 'color: red; font-weight: bolder');
+        document.getElementById('decode__text').value = '';
+        return;
+    } 
 
     if (textTyped) {
-        result = decrypt(textTyped);
+        let result = decrypt(textTyped);
         resEncrypted.innerText = result;
         statusDecode.innerHTML = "Mensagem Decriptografada!";
         document.getElementById('decode__text').value = '';
