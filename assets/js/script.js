@@ -75,6 +75,7 @@ function decryptText () {
 
     if ( textUpercase(textTyped)) {
         statusDecode.setAttribute('style', 'color: red; font-weight: bolder');
+        statusDecode.innerHTML = 'Apenas letras minúsculas e sem acento';
         document.getElementById('decode__text').value = '';
         return;
     } 
