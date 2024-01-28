@@ -55,7 +55,6 @@ function encryptText () {
     } else {
         statusDecode.setAttribute('style', 'color: red');
         statusDecode.innerHTML= 'Você precisa digitar alguma palavra';
-        imgSearch.style.display='block';
         document.getElementById('decode__text').value = '';
     }
 
