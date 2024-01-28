@@ -72,6 +72,11 @@ function decryptText () {
     const resEncrypted = document.getElementById('encrypted');
     const statusDecode = document.getElementById("status");
 
+    if (textTyped === "") {
+        statusDecode.setAttribute('style', 'color: red');
+        statusDecode.innerHTML = 'Você precisa digitar alguma palavra'; 
+    }
+
 
     if ( textUpercase(textTyped)) {
         statusDecode.setAttribute('style', 'color: red; font-weight: bolder');
