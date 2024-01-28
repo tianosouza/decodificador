@@ -23,10 +23,12 @@ addEventListener('click', function (event) {
     const alert = document.getElementById('text__alert');
     const statusDecode = document.getElementById("status");
     const resEncrypted = document.getElementById('encrypted');
+    const imgSearch = document.getElementById('img__search');
 
     if (event.target == textTyped ) {
         alert.setAttribute('style', 'color: #0A3871');
-        statusDecode.setAttribute('style', 'color: #0A3871');        
+        statusDecode.setAttribute('style', 'color: #0A3871');
+        imgSearch.style.display='block';        
         statusDecode.innerHTML= 'Nenhuma mensagem encontrada';
         resEncrypted.innerHTML='';
     }
