@@ -1,7 +1,17 @@
+const body = document.querySelector('body');
+const imgTexEncry = document.getElementById('img__search');
+
+addEventListener('click', function (event) {
+    if (event.target !== body){
+        decodeText;
+        imgTexEncry.setAttribute('style', 'display: none');
+    }
+})
+
 function decodeText() {
-    const encodedTextElement = document.getElementById("decoder__text");
+    const encodedTextElement = document.getElementById("decode__text");
     const encodedText = encodedTextElement.value.toLowerCase();
-    const decodedResultElement = document.getElementById("decoder");
+    const decodedResultElement = document.getElementById("encrypted");
     const statusDecoder = document.getElementById("status");
     const imgTexEncry = document.getElementById('img__search');
 
@@ -12,7 +22,8 @@ function decodeText() {
     if (decodedText) {
         imgTexEncry.setAttribute('style', 'display:none');
         statusDecoder.innerHTML = "Mensagem Criptografada!";
-    } 
+    }
+
     if (decodedText === "") {
         statusDecoder.innerHTML = "Você precisa digitar alguma palavra para criptografar!";
         statusDecoder.setAttribute('style', 'color: red', 'font-weight: 700')
@@ -60,11 +71,9 @@ function copyButton () {
 function encodeText () {
     const encodedTextElement = document.getElementById("decoder__text");
     const encodedText = encodedTextElement.value.toLowerCase();
-    const decodedResultElement = document.getElementById("decoder");
-    const statusDecoder = document.getElementById("status");
+    const decodedResultElement = document.getElementById("encrypted");
 
     encodedTextElement.value = "";
-
     
     decodedResultElement.innerHTML = encodedText;
 }

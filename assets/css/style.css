@@ -6,6 +6,8 @@
     --color-tertiary: #495057;
     --background: #e0e6fa;
     --background-secondary: #D8DFE8;
+
+    
 }
 
 * {
@@ -24,7 +26,7 @@ body {
     "main   main   main"
     "footer footer footer"; 
 }
-.header, .decoder__header {    
+.header, .decode__header {    
     grid-area: header;
     padding: 20px;
     display: flex;
@@ -41,7 +43,7 @@ body {
     flex-direction: column;
 }
 
-.main__decoder {
+.main__decode {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -50,7 +52,7 @@ body {
     gap: 12px;
 }
 
-#decoder__text {
+#decode__text {
     border: none;
     width: 100%;
     height: 70vh;
@@ -61,7 +63,7 @@ body {
     outline: none;
 }
 
-.text__alert {
+#text__alert {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +71,7 @@ body {
     font-size: .8rem;
 }
 
-.decoder__button{
+.decode__button{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -78,87 +80,88 @@ body {
     gap: 12px;
 }
 
-.button__crip, .button_desc,
-.button__paste {
+.btn__encryp, .btn_decryp,
+.btn__paste {
     width: 100%;
     padding: 20px;
     border-radius: 12px;
     border: none;
 }
 
-.button__crip, .button__paste {
+.btn__encryp, .btn__paste {
     background-color: var(--color-primary);
     color: var(--background);
 }
 
-.button__crip:hover, .button__paste:hover {
+.btn__encryp:hover, .btn__paste:hover {
     cursor: pointer;
     background-color: var(--background-secondary);
     color: var(--color-primary);
     font-size: .9rem;
 }
 
-.button_desc {
+.btn_decryp {
     background-color: var(--background-secondary);
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
 }
 
-.button_desc:hover {
+.btn_decryp:hover {
     cursor: pointer;
     background-color: var(--color-primary);
     color: var(--background);    
 }
 
-.main__text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;    
-}
-
-#img__search {
+#btn__paste {
     display: none;
 }
 
-.text__descrip {
+.main__text {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 12px;
+    padding: 20px;  
 }
 
-.descrip_status {
+#encrypted {
+    font-size: 1rem;
+}
+
+
+#img__search {
+    display: none;
+}
+
+.decode__status {
     justify-content: center;
     width: 80%;
     text-align: center;    
 }
 
-.decoder__ {
+.text__decoded {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 12px;
-    padding: 20px;
     font-size: .8rem;
     gap: 15px;
     color: var(--color-primary);
     background-color: white;
     box-sizing: border-box;
+    padding: 20px;    
 }
 
 .button__paste {
     display: none;
 }
 
-.footer, .decoder__footer { 
+.footer, .decode__footer { 
     grid-area: footer;
     min-height: 170px;
     padding: 24px;
@@ -193,25 +196,17 @@ body {
     flex-direction: row;
    }
    
-   .main__decoder {
+   .main__decode {
     width: 100%;
    }
 
-   .decoder__button  {
+   .decode__button  {
     flex-direction: row;
    }
 
-   .main__text {
+   .decode__status {
     width: 60%;
-   }
-
-   .text__descrip {
-    gap: 15px;
-   } 
-
-   .decoder__ {
-    height: 85vh;
-    flex-direction: column;
+    text-align: center;
    }
 
    #img__search {
@@ -222,17 +217,17 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .decoder__ {
-        height: 83vh;
+    .text__decoded {
+       
     }
 }
 @media (min-width: 1440px) {
-    .decoder__ {
-        height: 79vh;
+    .text__decoded {
+        
     }
 }
 @media (min-width: 2560px) {
-    .decoder__ {
-        height: 75vh;
+    .text__decoded {
+        
     }
 }
