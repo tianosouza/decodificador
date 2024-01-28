@@ -73,6 +73,9 @@ function decryptText () {
     const textTyped = document.getElementById('decode__text').value;
     const resEncrypted = document.getElementById('encrypted');
     const statusDecode = document.getElementById("status");
+    const imgSearch = document.getElementById('img__search');
+    
+    
 
     if (textTyped === "") {
         statusDecode.setAttribute('style', 'color: red');
@@ -89,6 +92,7 @@ function decryptText () {
 
     if (textTyped) {
         let result = decrypt(textTyped);
+        imgSearch.style.display = 'none';
         resEncrypted.innerText = result;
         statusDecode.innerHTML = "Mensagem Decriptografada!";
         document.getElementById('decode__text').value = '';
