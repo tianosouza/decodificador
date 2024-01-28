@@ -41,6 +41,7 @@ body {
     grid-area: main;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .main__decode {
@@ -69,6 +70,15 @@ body {
     align-items: center;
     gap: 12px;
     font-size: .8rem;
+    color: var(--color-primary);
+}
+
+.text__alert_disable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 3rem;
 }
 
 .decode__button{
@@ -124,7 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    padding: 20px;  
+    padding: 20px; 
 }
 
 #encrypted {
@@ -139,22 +149,22 @@ body {
 .decode__status {
     justify-content: center;
     width: 80%;
-    text-align: center;    
+    text-align: center;
+    color: var(--color-primary);    
 }
 
 .text__decoded {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     border-radius: 12px;
     font-size: .8rem;
-    gap: 15px;
     color: var(--color-primary);
     background-color: white;
-    box-sizing: border-box;
-    padding: 20px;    
+    padding: 20px;
 }
 
 .button__paste {
@@ -163,11 +173,13 @@ body {
 
 .footer, .decode__footer { 
     grid-area: footer;
-    min-height: 170px;
-    padding: 24px;
+    height: 90px;
+    padding: 10px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
     align-items: center;
     background-color: var(--color-primary); 
     text-align: center;
@@ -175,7 +187,6 @@ body {
 }
 
 .social__mida {
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,7 +222,7 @@ body {
 
    #img__search {
     display:flex;
-    width: 60%;
+    width: 100%;
    }
 
 }

@@ -15,8 +15,20 @@ function decrypt (text) {
 }
 
 function textUpercase(text) {
-    return /[A-ZÁÉÍÓÚÀÃÕÂÊÎÔÛÄËÏÖÜÇ]/.test(text);
+    return /[A-ZÁÉÍÓÚÀÃÕÂÊÎÔÛÄËÏÖÜÇ]/.test(text) || /[áéíóúàãõâêîôûäëïöüç]/.test(text);
 }
+
+addEventListener('click', function (event) {
+    const textTyped = document.getElementById('decode__text');
+    const alert = document.getElementById('text__alert');
+    const statusDecode = document.getElementById("status");
+
+    if (event.target == textTyped ) {
+        alert.setAttribute('style', 'color: #0A3871');
+        statusDecode.setAttribute('style', 'color: #0A3871');        
+        statusDecode.innerHTML= 'Nenhuma mensagem encontrada';
+    }
+})
 
 function encryptText () {
     const textTyped = document.getElementById('decode__text').value;
@@ -33,8 +45,7 @@ function encryptText () {
     }       
    
     if  (textTyped){
-        let result;
-        result = encrypt(textTyped);
+        let result = encrypt(textTyped);
         resEncrypted.innerText = result;
         statusDecode.innerHTML = 'Mensagen Criptografada';
         imgSearch.style.display='none';
